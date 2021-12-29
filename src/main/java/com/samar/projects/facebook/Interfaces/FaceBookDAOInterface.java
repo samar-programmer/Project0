@@ -23,7 +23,7 @@ public interface FaceBookDAOInterface {
 
 	int imageUploadDAO(String email);
 
-	int editProfileService(FacebookUser fbuser);
+	int editProfileDAO(FacebookUser fbuser);
 
 	int uploadContentToTimeline(TimeLineEntity timeLineEntity);
 

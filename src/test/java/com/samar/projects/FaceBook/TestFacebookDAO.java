@@ -22,6 +22,17 @@ public class TestFacebookDAO {
 	public void tearDown() throws Exception {
 		faceBookDAO = null;
 	}
+	@Test
+	public void testEditProfileDAO() {
+		System.out.println("Entering into Edit profile DAO");
+		FacebookUser facebookUser = new FacebookUser();
+		facebookUser.setName("samar2Edited");
+		facebookUser.setEmail("samar2@gmail.com");
+		facebookUser.setPassword("ssss");
+		facebookUser.setAddress("BagngolreEdited");
+		int result = faceBookDAO.editProfileDAO(facebookUser);
+		assert result > 0: "Error while Editing profile";
+	}
 	
 	@Test
 	public void testViewAllProfileDAO() {

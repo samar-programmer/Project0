@@ -30,6 +30,17 @@ public class TestFacebookService {
 	 * faceBookService.deleteProfileService(fbuser); assert result > 0:
 	 * "profiles not found"; }
 	 */
+	@Test
+	public void testEditProfileService() {
+		System.out.println("Entering into edit profile Service");
+		FacebookUser facebookUser = new FacebookUser();
+		facebookUser.setName("samar1Edited");
+		facebookUser.setEmail("samar1@gmail.com");
+		facebookUser.setPassword("ssss");
+		facebookUser.setAddress("BangaloreEdited");
+		int result = faceBookService.editProfileService(facebookUser);
+		assert result > 0: "Error while Editing profile";
+	}
 	
 	@Test
 	public void testViewAllProfileService() {
@@ -54,6 +65,7 @@ public class TestFacebookService {
 		}
 		assert result > 0: "profile not found";
 	}
+	
 
 	@Test
 	public void testCreateProfileService() {

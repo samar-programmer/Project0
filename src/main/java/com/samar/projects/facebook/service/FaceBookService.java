@@ -58,7 +58,7 @@ public class FaceBookService implements FaceBookServiceInterface {
 	@Override
 	public int editProfileService(FacebookUser fbuser) {
 		FaceBookDAOInterface faceBookDAOInterface=DAOFactory.createObject();
-		 return faceBookDAOInterface.editProfileService(fbuser);
+		 return faceBookDAOInterface.editProfileDAO(fbuser);
 	}
 
 	@Override

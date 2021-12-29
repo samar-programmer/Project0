@@ -206,7 +206,7 @@ public class FaceBookDAO implements FaceBookDAOInterface {
 	}
 
 	@Override
-	public int editProfileService(FacebookUser fbuser) {
+	public int editProfileDAO(FacebookUser fbuser) {
 		System.out.println("	----------Edit Information-------");
 		FaceBookDAO faceBookDAO = new FaceBookDAO();
 		fbuser = faceBookDAO.viewProfileDAO(fbuser);
