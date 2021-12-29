@@ -46,9 +46,9 @@ public class TestFacebookContrller {
 	
 	@Test
 	public void testLoginController() {
-		System.out.println("Inside View Login Controller");
+		System.out.println("Inside Login Controller");
 		int result = facebookControllerInterface.loginProfileController();
-		assert result > 0 : "Error during view all profiles";
+		assert result > 0 : "Error during Login profiles";
 	}
 	
 	

@@ -23,8 +23,9 @@ public class DeleteProfileService {
 
 	@Test
 	public void deleteProfileService() {
+		System.out.println("Inside delete profile service");
 		FacebookUser fbuser = new FacebookUser();
-		fbuser.setEmail("king@gmail.com");
+		fbuser.setEmail("sasi@gmail.com");
 		int result = faceBookService.deleteProfileService(fbuser);
 		assert result > 0 : "profiles not found";
 	}

@@ -33,6 +33,7 @@ public class TestFacebookService {
 	
 	@Test
 	public void testViewAllProfileService() {
+		System.out.println("Entering into View all profile Sevice");
 		List<FacebookUser> fbuserList = faceBookService.viewAllProfileService();
 		int result=0;
 		if(fbuserList.size()> 0) {
@@ -43,8 +44,9 @@ public class TestFacebookService {
 	
 	@Test
 	public void testViewProfileService() {
+		System.out.println("Entering into view profile Service");
 		FacebookUser facebookUser = new FacebookUser();
-		facebookUser.setEmail("king@gmail.com");
+		facebookUser.setEmail("samar@gmail.com");
 		FacebookUser fbuser = faceBookService.viewProfileService(facebookUser);
 		int result=0;
 		if(null != fbuser.getName()) {
@@ -55,10 +57,11 @@ public class TestFacebookService {
 
 	@Test
 	public void testCreateProfileService() {
+		System.out.println("Entering into create profile Service");
 		FacebookUser facebookUser = new FacebookUser();
-		facebookUser.setName("king");
-		facebookUser.setEmail("king@gmail.com");
-		facebookUser.setPassword("king");
+		facebookUser.setName("samar1");
+		facebookUser.setEmail("samar1@gmail.com");
+		facebookUser.setPassword("ssss");
 		facebookUser.setAddress("chennai");
 		int result = faceBookService.createProfileService(facebookUser);
 		assert result > 0: "Error while creating profile";

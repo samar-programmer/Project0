@@ -25,6 +25,7 @@ public class TestFacebookDAO {
 	
 	@Test
 	public void testViewAllProfileDAO() {
+		System.out.println("Entering into view All profile DAO");
 		List<FacebookUser> fbuserList = faceBookDAO.viewProfileDAO();
 		int result=0;
 		if(fbuserList.size()> 0) {
@@ -37,7 +38,7 @@ public class TestFacebookDAO {
 	public void testViewProfileDAO() {
 		System.out.println("Entering into view profile DAO");
 		FacebookUser facebookUser = new FacebookUser();
-		facebookUser.setEmail("king@gmail.com");
+		facebookUser.setEmail("samar@gmail.com");
 		FacebookUser fbuser = faceBookDAO.viewProfileDAO(facebookUser);
 		int result=0;
 		if(null != fbuser.getName()) {
@@ -50,9 +51,9 @@ public class TestFacebookDAO {
 	public void testCreateProfileDAO() {
 		System.out.println("Entering into create profile DAO");
 		FacebookUser facebookUser = new FacebookUser();
-		facebookUser.setName("king");
-		facebookUser.setEmail("king@gmail.com");
-		facebookUser.setPassword("king");
+		facebookUser.setName("samar2");
+		facebookUser.setEmail("samar2@gmail.com");
+		facebookUser.setPassword("ssss");
 		facebookUser.setAddress("chennai");
 		int result = faceBookDAO.createProfileDAO(facebookUser);
 		assert result > 0: "Error while creating profile";
